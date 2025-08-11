@@ -1,5 +1,5 @@
 class ShortInputException(Exception):
-    """Пользовательский класс исключения."""
+    '''Пользовательский класс исключения.'''
     def __init__(self, length, atleast):
         Exception.__init__(self)
         self.length = length
