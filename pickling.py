@@ -1,18 +1,14 @@
-import pickle 
-
-# имя файла в котором мы сохраним обьект
-spoplistfile = 'shoplist.data'
+import pickle
+# имя файла, в котором мы сохраним объект
+shoplistfile = 'shoplist.data'
 # список покупок
-shop = ['яблоко','манго','морковь']
-
-# запись в файл
+shoplist = ['яблоки', 'манго', 'морковь']
+# Запись в файл
 f = open(shoplistfile, 'wb')
-pickle.dump(shoplist, f) # помещаем обьект в файл 
+pickle.dump(shoplist, f) # помещаем объект в файл
 f.close()
-
-del shoplist # уничтожаем переменую shop
-# Считываем из хранилищя
-
-f = open(shoplist, 'rb')
+del shoplist # уничтожаем переменную shoplist
+# Считываем из хранилища
+f = open(shoplistfile, 'rb')
 storedlist = pickle.load(f) # загружаем объект из файла
 print(storedlist)
